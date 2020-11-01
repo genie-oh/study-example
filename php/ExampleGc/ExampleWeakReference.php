@@ -84,8 +84,8 @@ class ExampleWeakReference extends Command
         $data2 = $storage->get('2');
         Log::debug('datas of 1,2 are cached in BlobCacheStorage => ', $storage->getCachedKeysByArray());
 
-        $data1 = $storage->get('1');
-        Log::debug('data of 1 already cached. get from Cache => ', $storage->getCachedKeysByArray());
+        $data2dummy = $storage->get('2');
+        Log::debug('data of 2 already cached. get from Cache => ', $storage->getCachedKeysByArray());
 
         unset($data1);
         Log::debug('unset $data1. cache in BlobCacheStorage will be removed because datas of 1 is not needed on anywhere. => ', $storage->getCachedKeysByArray());
